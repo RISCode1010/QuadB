@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="theme-dark">
+        <div style="padding: 20px 30px 0px">
+            <div class="align-items-center justify-content-sm-center row">
+                <div class="text-center-sm col-12 col-sm-7 col-md-5 col-lg-4">
+                    <a href="/">
+                        <div class="padding-none text-center-xs col-12 col-sm-12 col-md-11 col-lg-11">
+                            <img src="./public/hodlinfo_logo.png" class="fiat-logo" style="padding: 10px ;" />
+
+                        </div>
+                    </a>
+
+                </div>
+                <div class="text-center padding-none col-12 col-sm-12 col-md-2 col-lg-4">
+                    <div class="btn-group">
+                        <button type="button" aria-haspopup="true" aria-expanded="false"
+                            class="header-button dropdown-toggle btn btn-secondary">INR
+                        </button>
+                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu">
+                            <a value="INR" tabindex="0" role="menuitem" class="dropdown-item" href="/ETH-INR"> INR
+                            </a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+
+                        <div class="dropdown">
+                            <button class="dropdown-button header-button dropdown-toggle btn btn-secondary"
+                                onclick="toggleDropdown()">ETH</button>
+
+                            <div class="dropdown-content" id="myDropdown">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="selectedValue" class="btn-group">
+                        <a target="_blank" href="https://wazirx.com/"
+                            type="button" aria-haspopup="true" aria-expanded="false"
+                            class="header-button btn btn-secondary">BUY ETH</a>
+                        <a class="color-white" href="#">
+                            <div class="header-telegram-button">
+                                <div class="d-inline-block">
+                                    <img src="./public/telegram.png" class="telegram-logo" />
+                                </div>
+                                <div class="text-nowrap d-inline-block color-white">Connect Telegram</div>
+                            </div>
+                        </a>
+                        <div class="margin-10 d-inline-block">
+                            <label class="switch">
+                                <input type="checkbox" checked="" />
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="right-header col-12 col-sm-12 col-md-5 col-lg-4">
+                        <div class="d-inline-flex flex-wrap align-items-center justify-content-center">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-bottom-50">
+                <div class="Container-fluid " style="padding: 0px 30px;">
+                    <div class="d-flex justify-content-around align-items-center average-header"
+                        style="padding: 10px 0px;">
+                        <div class="text-center">
+                            <div class="average-header-maintext color-green">0.82 %</div>
+                            <div class="average-header-subHeading">5 Mins</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="average-header-maintext color-green">1.67 %</div>
+                            <div class="average-header-subHeading">1 Hour</div>
+                        </div>
+                        <div style="max-width: 40%;">
+                            <div class="text-center font-32 average-block">
+                                <div class="average-subText">
+                                    <span class="subText-heading">Best Price to Trade</span>
+                                </div>
+                                <div class="average-heading" style="padding-bottom: 10px;">₹ 2,05,185</div>
+                                <div class="average-subText">Average ETH/INR net price including commission</div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="average-header-maintext color-green">11.18 %</div>
+                            <div class="average-header-subHeading">1 Day</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="average-header-maintext color-green">15.84 %</div>
+                            <div class="average-header-subHeading">7 Days</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="fiat-crypto-table table-responsive" style="margin: 0px auto;">
+                    <table class="table table-borderless text-center">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h4><span class="pointer">#</span></h4>
+                                </th>
+                                <th>
+                                    <h4><span class="pointer">Platform</span></h4>
+                                </th>
+                                <th>
+                                    <h4><span class="pointer">Last Traded Price</span></h4>
+                                </th>
+                                <th>
+                                    <h4><span class="pointer">Buy / Sell Price</span></h4>
+                                </th>
+                                <th>
+                                    <h4><span class="pointer">Difference</span></h4>
+                                </th>
+                                <th>
+                                    <h4><span class="pointer">Savings</span></h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="align-middle">
+                                    <h4 class="table-text">1</h4>
+                                </td>
+                                <td class="align-middle"><a target="_blank" href="">
+                                        <h4 class="table-text"><img src="./public/wazix.png" class="exchange-logo"> <span
+                                                class="exchange-name ">WazirX</span></h4>
+                                    </a></td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoLast" class="table-text">₹ 1,79,500</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoBuy" class="table-text"><span>₹ 1,79,200 / ₹ 1,79,500</span></h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoVolume" class="table-text color-green">7.27 %</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 class="table-text color-green">▲ ₹ 12,165</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle">
+                                    <h4 class="table-text">2</h4>
+                                </td>
+                                <td class="align-middle"><a target="_blank" href="">
+                                        <h4 class="table-text">
+                                            <img src="./public/bitbns.png" class="exchange-logo" />
+                                            <span class="exchange-name ">Bitbns</span>
+                                        </h4>
+                                    </a></td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoLast" class="table-text">₹ 1,76,875</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoLast" class="table-text"><span>₹ 1,75,745 / ₹ 1,76,801</span></h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoBuy" class="table-text color-green">5.70 %</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoVolume" class="table-text color-green">▲ ₹ 9,540</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle">
+                                    <h4 class="table-text">3</h4>
+                                </td>
+                                <td class="align-middle"><a target="_blank" href=" ">
+                                        <h4 class="table-text">
+                                            <img src="./public/giotus.png" class="exchange-logo" /><span
+                                                class="exchange-name ">Giotus</span>
+                                        </h4>
+                                    </a></td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoLast" class="table-text">₹ 1,79,000</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoLast" class="table-text"><span>₹ 1,78,010 / ₹ 1,79,000</span></h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoBuy" class="table-text color-green">6.97 %</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoVolume" class="table-text color-green">▲ ₹ 11,665</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle">
+                                    <h4 class="table-text">4</h4>
+                                </td>
+                                <td class="align-middle"><a target="_blank" href=" ">
+                                        <h4 class="table-text">
+                                            <img src="./public/colodax.png" class="exchange-logo" /><span
+                                                class="exchange-name ">Colodax</span>
+                                        </h4>
+                                    </a></td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoLast" class="table-text">₹ 1,08,675</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoLast" class="table-text"><span>₹ 1,08,675 / ₹ 1,10,469</span></h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoBuy" class="table-text color-red">-35.06 %</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoVolume" class="table-text color-red">▼ ₹ 58,659</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle">
+                                    <h4 class="table-text">5</h4>
+                                </td>
+                                <td class="align-middle"><a target="_blank" href=" ">
+                                        <h4 class="table-text">
+                                            <img src="./public/zebpay.png" class="exchange-logo" /><span
+                                                class="exchange-name ">Zebpay</span>
+                                        </h4>
+                                    </a></td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoLast" class="table-text">₹ 1,82,000</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoLast" class="table-text"><span>₹ 1,82,200 / ₹ 1,82,000</span></h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoBuy" class="table-text color-green">8.76 %</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoVolume" class="table-text color-green">▲ ₹ 14,665</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle">
+                                    <h4 class="table-text">6</h4>
+                                </td>
+                                <td class="align-middle"><a target="_blank" href=" ">
+                                        <h4 class="table-text">
+                                            <img src="./public/coibdcx.png" class="exchange-logo" /><span
+                                                class="exchange-name ">CoinDCX</span>
+                                        </h4>
+                                    </a></td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoLast" class="table-text">₹ 1,77,959</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoLast" class="table-text"><span>₹ 1,77,959 / ₹ 1,78,763</span></h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoBuy" class="table-text color-green">6.35 %</h4>
+                                </td>
+                                <td class="align-middle">
+                                    <h4 id="cryptoVolume" class="table-text color-green">▲ ₹ 10,624</h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="padding-header" style="padding: 20px;">
+
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+<script src="scripts.js"></script>
+
+</html>
